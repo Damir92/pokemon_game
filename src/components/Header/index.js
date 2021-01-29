@@ -1,15 +1,15 @@
 import s from './style.module.css';
 
-const HeaderBlock = () => {
-    return (
-        <header className={s.root}>
-            <div className={s.forest}></div>
-            <div className={s.container}>
-                <h1>This is title</h1>
-                <p>This is Description!</p>
-            </div>
-        </header>
-    )
+const HeaderBlock = ({ title = '', descr = '' }) => {
+  return (
+    <header className={s.root}>
+      <div className={s.forest}></div>
+      <div className={s.container}>
+        { title && <h1>{title}</h1> }
+        { descr && <p>{descr}</p> }
+      </div>
+    </header>
+  )
 };
 
 export default HeaderBlock;
