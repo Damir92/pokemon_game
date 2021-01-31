@@ -1,20 +1,10 @@
 import s from './style.module.css';
 
-import bg1 from '../../assets/bg1.jpg';
-import bg2 from '../../assets/bg2.jpg';
-
 const Layout = ({ id = 0, title = '', desc = '', urlBg = '', colorBg = '' }) => {
   let style = {};
 
-  if (urlBg === 'bg1') {
-    style['backgroundImage'] = `url(${bg1})`;
-  } else if (urlBg === 'bg2') {
-    style['backgroundImage'] = `url(${bg2})`;
-  }
-
-  if (colorBg) {
-    style['backgroundColor'] = colorBg;
-  }
+  colorBg && (style['backgroundColor'] = colorBg);
+  urlBg && (style['backgroundImage'] = `url(${urlBg})`);
 
   return (
     <section

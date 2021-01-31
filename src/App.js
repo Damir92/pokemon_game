@@ -2,6 +2,9 @@ import Header from './components/Header';
 import Layout from './components/Layout';
 import Footer from './components/Footer';
 
+import BgImage1 from './assets/bg1.jpg';
+import BgImage2 from './assets/bg2.jpg';
+
 import './App.css';
 
 function App() {
@@ -15,7 +18,7 @@ function App() {
         id='1'
         title='Title 1'
         desc='Description 1'
-        urlBg='bg1'
+        urlBg={BgImage1}
       />
       <Layout
         id='2'
@@ -27,7 +30,7 @@ function App() {
         id='3'
         title='Title 3'
         desc='Description 3'
-        urlBg='bg2'
+        urlBg={BgImage2}
       />
       <Footer />
     </>
